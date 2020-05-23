@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<!-- uso facet -->
+	
+	<!-- enumerazione -->
+	
+	
+	<!-- Restrizione valore numero -->
+	<xs:simpleType name="annoType">
+	<xs:restriction base="xs:decimal">
+		<xs:totalDigits value="4"/>
+		<xs:maxInclusive value="2020"/>
+		<xs:minInclusive value="1700"/>
+	</xs:restriction>
+	</xs:simpleType>
+	
+	<!-- regular expression -->
+	<xs:simpleType name="lunghType">
+	<xs:restriction base="xs:string">
+		<xs:pattern value="[0-9][0-9]:[0-5][0-9]"/>
+	</xs:restriction>
+	</xs:simpleType>
+	
+	
+	<!--esempi-->
+	
+	<xs:complexType name="branoType">
+	<xs:sequence>
+		<xs:element name="titolobrano" type="xs:string"/>
+		<xs:element name="lunghezza" type="lunghType" />
+	</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="albumType">
+	<xs:sequence>
+		<xs:element name="titoloalbum" type="xs:string"/>
+		<xs:element name="anno" type="annoType"/>
+		<xs:element name="brano" type="branoType"  minOccurs="0" maxOccurs="unbounded" />
+	</xs:sequence>
+	</xs:complexType>
+
+
+	<xs:complexType name="musicistaType">
+	<xs:sequence>
+		<xs:element name="nome" type="xs:string"/>
+		<xs:element name="cognome" type="xs:string"/>
+		<xs:element name="nomeArte" type="xs:string" minOccurs="0"  maxOccurs="1"/>
+		<xs:element name="genere" type="xs:string"/>
+		<xs:element name="album" type="albumType" minOccurs="0" maxOccurs="unbounded"/>
+	</xs:sequence>		
+	</xs:complexType>
+	
+	
+	
+	<xs:complexType name="BibliotecaType">
+	<xs:sequence>
+		<xs:element name="musicista" type="musicistaType" minOccurs="0" maxOccurs="unbounded" />
+	</xs:sequence>
+	</xs:complexType>
+	
+	
+	<xs:element name="biblioteca" type="BibliotecaType"/>
+		
+</xs:schema>

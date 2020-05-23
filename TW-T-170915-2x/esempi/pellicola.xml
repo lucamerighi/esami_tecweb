@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cineteca xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="grammar.xsd">
+	
+	<pellicola>
+		<regia>ABS</regia>
+		<titolo>Giallo</titolo>
+		<statoConserv>buono</statoConserv>
+		<tipoPell>32</tipoPell>
+	</pellicola>
+	
+	<pellicola>
+		<regia>FNSKID</regia>
+		<titolo>Blu</titolo>
+		<statoConserv>cattivo</statoConserv>
+		<tipoPell>16</tipoPell>
+	</pellicola>
+	
+	
+	<pellicola>
+		<regia>DKLDIO</regia>
+		<titolo>Rosso</titolo>
+		<statoConserv>cattivo</statoConserv>
+		<tipoPell>16</tipoPell>
+	</pellicola>
+	
+	
+	<pellicola>
+		<regia>DKDJPPS</regia>
+		<titolo>Verde</titolo>
+		<statoConserv>buono</statoConserv>
+		<tipoPell>16</tipoPell>
+	</pellicola>
+	
+	<audiovisivo>
+		<cognomeReg>Rossi</cognomeReg>
+		<nomeReg>Mario</nomeReg>
+		<titolo>roma</titolo>
+		<nazione>it</nazione>
+		<lingua>ita</lingua>
+		<colore>BN</colore>
+		<durata>124</durata>
+		<tipologia>Docum</tipologia>
+		<formato>DVD</formato>
+		<anno>1937</anno>
+		<disponibilita>si</disponibilita>
+		<collocazione>12.45.78.325.DNH</collocazione>	
+	</audiovisivo>
+	
+	<audiovisivo>
+		<cognomeReg>Verdi</cognomeReg>
+		<nomeReg>Luisa</nomeReg>
+		<titolo>Bologna</titolo>
+		<nazione>it</nazione>
+		<lingua>ita</lingua>
+		<colore>Colore</colore>
+		<durata>234</durata>
+		<tipologia>Film</tipologia>
+		<formato>DVD</formato>
+		<anno>2001</anno>
+		<disponibilita>no</disponibilita>
+		<collocazione>12.45.78.325.DNH</collocazione>	
+	</audiovisivo>
+	
+	<audiovisivo>
+		<cognomeReg>Gialli</cognomeReg>
+		<nomeReg>Lina</nomeReg>
+		<titolo>Venezia</titolo>
+		<nazione>it</nazione>
+		<lingua>ita</lingua>
+		<colore>BN</colore>
+		<durata>124</durata>
+		<tipologia>Doc</tipologia>
+		<formato>DVD</formato>
+		<anno>1987</anno>
+		<disponibilita>si</disponibilita>
+		<collocazione>12.45.78.325.DNH</collocazione>	
+	</audiovisivo>
+	
+	<audiovisivo>
+		<cognomeReg>Tomms</cognomeReg>
+		<nomeReg>Tom</nomeReg>
+		<titolo>Milano</titolo>
+		<nazione>it</nazione>
+		<lingua>ita</lingua>
+		<colore>Colore</colore>
+		<durata>45</durata>
+		<tipologia>Dos</tipologia>
+		<formato>DVD</formato>
+		<anno>1843</anno>
+		<disponibilita>si</disponibilita>
+		<collocazione>12.45.78.325.DNH</collocazione>	
+	</audiovisivo>
+	
+	<audiovisivo>
+		<cognomeReg>Pippo</cognomeReg>
+		<nomeReg>Filo</nomeReg>
+		<titolo>Firenze</titolo>
+		<nazione>id</nazione>
+		<lingua>ida</lingua>
+		<colore>BN</colore>
+		<durata>65</durata>
+		<tipologia>fsdd</tipologia>
+		<formato>DVD</formato>
+		<anno>1978</anno>
+		<disponibilita>no</disponibilita>
+		<collocazione>12.45.78.325.DNH</collocazione>	
+	</audiovisivo>
+	
+</cineteca>

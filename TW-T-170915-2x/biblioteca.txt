@@ -1,0 +1,16 @@
+MUSICISTI ROCK CON MENO DI 3 ALBUM:
+figthers
+chili peppers
+
+
+aggiungo dark necessities a  red hot chili peppers
+ Esito: true
+
+aggiungo californication a  red hot chili peppers 
+Esito: false
+
+aggiungo dark necessities a  black chili peppers
+Esito: false
+
+MUSICISTI ROCK CON MENO DI 3 ALBUM:
+figthers

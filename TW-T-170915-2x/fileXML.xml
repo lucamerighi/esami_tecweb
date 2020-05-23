@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<biblioteca xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="grammar.xsd">
+	
+<musicista>
+	<nome>red hot</nome>
+	<cognome>chili peppers</cognome>
+	<nomeArte>rhcp</nomeArte>
+	<genere>rock</genere>
+	<album>
+		<titoloalbum>californication</titoloalbum>
+		<anno>1987</anno>
+		<brano>
+			<titolobrano>dani california</titolobrano>
+			<lunghezza>02:34</lunghezza>
+		</brano>
+		<brano>
+			<titolobrano>scar tissue</titolobrano>
+			<lunghezza>03:34</lunghezza>
+		</brano>
+		
+	</album>
+	<album>
+		<titoloalbum>lovesex</titoloalbum>
+		<anno>1989</anno>
+		<brano>
+			<titolobrano>under the bridge</titolobrano>
+			<lunghezza>04:45</lunghezza>
+		</brano>
+		<brano>
+			<titolobrano>snow</titolobrano>
+			<lunghezza>01:45</lunghezza>
+		</brano>
+	</album>
+</musicista>	
+
+<musicista>
+	<nome>foo</nome>
+	<cognome>figthers</cognome>
+	<nomeArte>ff</nomeArte>
+	<genere>rock</genere>
+	<album>
+		<titoloalbum>concrete and gold</titoloalbum>
+		<anno>2018</anno>
+		<brano>
+			<titolobrano>learn to fly</titolobrano>
+			<lunghezza>04:50</lunghezza>
+		</brano>
+	</album>
+</musicista>	
+
+<musicista>
+	<nome>bon</nome>
+	<cognome>jovi</cognome>
+	<nomeArte>bj</nomeArte>
+	<genere>poprock</genere>
+	<album>
+		<titoloalbum>best of</titoloalbum>
+		<anno>2002</anno>
+		<brano>
+			<titolobrano>livin on a prayer</titolobrano>
+			<lunghezza>03:50</lunghezza>
+		</brano>
+	</album>
+</musicista>
+
+	
+</biblioteca>
