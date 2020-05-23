@@ -6,6 +6,8 @@ Ognuno si crei il proprio branch e carichi lì tutte le soluzioni, idealmente co
 
 ## Per contribuire
 
+**Scrivetemi in privato lo username di Github o la vostra mail**, poi
+
 - Dalla home, tasto verde `Clone or download` e copiare il link
 - Da terminale fare `git clone [link_copiato]`, o da Git GUI fare clona repository e inserire il link
 - Entrare nella cartella generata esami_tecweb e creare il proprio branch con `git checkout -b [proprio_nome]`, ad esempio `git checkout -b mariorossi`
