@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<xs:simpleType name="colType">
+	<xs:restriction base="xs:string">
+		<xs:enumeration value="Colore"/>
+		<xs:enumeration value="BN"/>
+	</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="formatoType">
+	<xs:restriction base="xs:string">
+		<xs:enumeration value="Blu-Ray"/>
+		<xs:enumeration value="DVD"/>
+		<xs:enumeration value="Divx"/>
+		<xs:enumeration value="VHS"/>
+	</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="dispType">
+	<xs:restriction base="xs:string">
+		<xs:enumeration value="si"/>
+		<xs:enumeration value="no"/>
+	</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="pellType">
+	<xs:restriction base="xs:decimal">
+		<xs:enumeration value="32"/>
+		<xs:enumeration value="16"/>
+	</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="annoType">
+	<xs:restriction base="xs:decimal">
+		<xs:totalDigits value="4"/>
+		<xs:maxInclusive value="2020"/>
+		<xs:minInclusive value="1700"/>
+	</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="collocType">
+	<xs:restriction base="xs:string">
+		<xs:pattern value="[0-9][0-9]\.[0-9][0-9]\.[0-9][0-9]\.[0-9][0-9][0-9]\.[A-Z][A-Z][A-Z]"/>
+	</xs:restriction>
+	</xs:simpleType>
+	
+	
+	<xs:complexType  name="audiovType">
+		<xs:sequence>
+			<xs:element name="cognomeReg" type="xs:string" />
+			<xs:element name="nomeReg" type="xs:string"/>
+			<xs:element name="titolo" type="xs:string"/>
+			<xs:element name="nazione" type="xs:string" />
+			<xs:element name="lingua" type="xs:string"/>
+			<xs:element name="colore" type="colType" />
+			<xs:element name="durata" type="xs:decimal" />
+			<xs:element name="tipologia" type="xs:string"/>
+			<xs:element name="formato" type="formatoType"/>
+			<xs:element name="anno" type="annoType" />
+			<xs:element name="disponibilita" type="dispType"/>
+			<xs:element name="collocazione" type="collocType"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	
+	<xs:complexType  name="pellicolaType">
+		<xs:sequence>
+			<xs:element name="regia" type="xs:string" />
+			<xs:element name="titolo" type="xs:string"/>
+			<xs:element name="statoConserv" type="xs:string" />
+			<xs:element name="tipoPell" type="pellType"/>
+			
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:element name="cineteca">
+		<xs:complexType>
+			<xs:choice  maxOccurs="unbounded">
+				<xs:element name="audiovisivo" type="audiovType" />
+				<xs:element name="pellicola" type="pellicolaType" />
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	
+		
+</xs:schema>
