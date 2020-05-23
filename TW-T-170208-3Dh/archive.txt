@@ -1,0 +1,8 @@
+Formati oggetti digitali degli archivi: 
+A111: 2
+A222: 1
+
+
+Archivi con formati jpg: 
+A111
+A222

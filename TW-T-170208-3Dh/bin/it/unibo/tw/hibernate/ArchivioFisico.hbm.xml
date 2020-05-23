@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class name="it.unibo.tw.hibernate.ArchivioFisico" table="archivi">
+     <id name="idArch" column="idArch" />
+    <property name="codArch" column="codArch" not-null="true" unique="true" />
+    <property name="nome" column="Nome"/>
+    <property name="descrizione" column="descrizione"/>
+     <property name="dataCreazione" column="dataCreazione"/>
+    
+    
+      <set name="materiali" table="materiali" fetch="select" cascade="all" >
+    	<key column="idArch" />
+    	<one-to-many class="it.unibo.tw.hibernate.MaterialeFisico"></one-to-many>
+    </set>
+    
+    
+  </class>
+</hibernate-mapping>

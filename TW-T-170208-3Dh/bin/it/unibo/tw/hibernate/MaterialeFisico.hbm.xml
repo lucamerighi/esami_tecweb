@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class name="it.unibo.tw.hibernate.MaterialeFisico" table="materiali">
+    <id name="idMat" column="idMat" />
+    <property name="codMat" column="codMat" not-null="true" unique="true"/>
+    <property name="nome" column="Nome"/>
+    <property name="descrizione" column="descrizione"/>
+    <property name="dataCreaz" column="dataCreaz"/>
+    
+     <many-to-one name="archivio" class="it.unibo.tw.hibernate.ArchivioFisico" fetch="select">
+    	<column name="idArch"  not-null="true"></column>
+    </many-to-one>
+    
+      <set name="oggetti" table="oggettiDig" fetch="select" cascade="all" >
+    	<key column="idMat" />
+    	<one-to-many class="it.unibo.tw.hibernate.OggettoDigitale"></one-to-many>
+    </set>
+    
+  </class>
+</hibernate-mapping>
