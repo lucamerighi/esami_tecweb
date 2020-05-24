@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class name="hibernate.Progetto" table="progetti">
+    <id name="codiceProgetto" column="codiceProgetto" />
+    <property name="nomeProgetto" column="nomeProgetto"/>
+    <property name="year" column="year"/>
+    <property name="durata" column="durata"/>
+    
+    <set name="workPackage" table="wp" inverse="true" lazy="true" fetch="select">
+    	<key>
+    		<column name="codiceProgetto" not-null="false"/>
+    	</key>
+    	<one-to-many class="hibernate.Work_Package"/>
+    </set>
+    
+	
+  </class>
+</hibernate-mapping>

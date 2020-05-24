@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MINIVeg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNameSpaceSchemaLocation="prodotto.xsd">
+
+<prodotto>
+	<id>02</id>
+	<verdura>
+		<name>carota</name>
+		<codice>V</codice>
+	</verdura>
+	<prezzo>5.50</prezzo>
+</prodotto>
+
+<prodotto>
+	<id>01</id>
+	<frutta>
+		<name>pera</name>
+		<codice>F</codice>
+	</frutta>
+	<prezzo>5.50</prezzo>
+</prodotto>
+
+<prodotto>
+	<id>03</id>
+	<frutta>
+		<name>pera</name>
+		<codice>F</codice>
+	</frutta>
+	<prezzo>10.50</prezzo>
+</prodotto>
+
+<prodotto>
+	<id>02</id>
+	<verdura>
+		<name>carota</name>
+		<codice>V</codice>
+	</verdura>
+	<prezzo>100.50</prezzo>
+</prodotto>
+
+
+</MINIVeg>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+
+<xs:simpleType name="nomeVerduraType">
+<xs:restriction base="xs:string">
+	<xs:enumeration value="carota"/>
+	<xs:enumeration value="zucchina"/>
+	<xs:enumeration value="finocchio"/>
+	<xs:enumeration value="pomodoro"/>
+	<xs:enumeration value="sedano"/>
+</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="nomeFruttaType">
+<xs:restriction base="xs:string">
+	<xs:enumeration value="mela"/>
+	<xs:enumeration value="arancia"/>
+	<xs:enumeration value="pera"/>
+	<xs:enumeration value="mandarino"/>
+</xs:restriction>
+</xs:simpleType>
+
+
+<xs:complexType name="fruttaType">
+	<xs:sequence>
+		<xs:element name="name" type="nomeFruttaType"/>
+		<xs:element name="codice" type="xs:string" fixed="F"/>
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="verduraType">
+	<xs:sequence>
+		<xs:element name="name" type="nomeVerduraType"/>
+		<xs:element name="codice" type="xs:string" fixed="V"/>
+	</xs:sequence>
+</xs:complexType>
+
+<xs:simpleType name="prezzoType">
+<xs:restriction base="xs:decimal">
+ 	<xs:pattern value="[0-9]*\.[0-9]{2}"/>
+</xs:restriction>
+</xs:simpleType>
+
+<xs:complexType name="prodottoType">
+	<xs:sequence>
+		<xs:element name="id" type="xs:string"/>
+		<xs:choice>
+			<xs:element name="verdura" type="verduraType"/>
+			<xs:element name="frutta" type="fruttaType"/>
+		</xs:choice>
+		<xs:element name="prezzo" type="prezzoType"/>
+	</xs:sequence>
+
+</xs:complexType>
+
+<xs:complexType name="MINIVegType">
+<xs:sequence>
+	<xs:element name="prodotto" type="prodottoType" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:element name="MINIVeg" type="MINIVegType"/>
+
+</xs:schema>
